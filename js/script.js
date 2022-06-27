@@ -13,3 +13,17 @@
 //     MILESTONE 3
 // Al click dell'utente sulle frecce, l'immagine attiva cambia e diventa visibile nello slider, prendendo il posto della precedente.
 
+
+
+
+// array delle immagini
+const images = ['img/01.jpg', 'img/02.jpg', 'img/03.jpg', 'img/04.jpg', 'img/05.jpg',];
+const gallery = document.getElementById("gallery");
+
+for (let i = 0; i < images.length; i++) {
+    gallery.innerHTML += `<img src="${images[i]}">`
+}
+
+
+// nell'array delle immagini aggiungo la classe active alla posizione 0
+let currentActiveIndex = 0;
