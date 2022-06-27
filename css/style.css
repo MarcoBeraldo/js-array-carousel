@@ -1,0 +1,38 @@
+#carousel {
+    width: 1200px;
+    margin: 100px auto;
+    height: 500px;
+    position: relative;
+}
+
+.gallery>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    border-radius: 15px;
+}
+
+.gallery {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery .active {
+    display: block;
+}
+
+#carousel .fa-solid {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#prev {
+    right: 103%;
+}
+
+#next {
+    left: 103%;
+}
