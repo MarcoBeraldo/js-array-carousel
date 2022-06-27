@@ -21,9 +21,11 @@ const images = ['img/01.jpg', 'img/02.jpg', 'img/03.jpg', 'img/04.jpg', 'img/05.
 const gallery = document.getElementById("gallery");
 
 for (let i = 0; i < images.length; i++) {
-    gallery.innerHTML += `<img src="${images[i]}">`
+    gallery.innerHTML += `<img src="${images[i]}" class="item">`
 }
 
+let activeCurrentIndex = 0
+const galleryImages = document.getElementsByClassName("item")
+console.log(galleryImages)
+galleryImages[activeCurrentIndex].classList.add("active");
 
-// nell'array delle immagini aggiungo la classe active alla posizione 0
-let currentActiveIndex = 0;

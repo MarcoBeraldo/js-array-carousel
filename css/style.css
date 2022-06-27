@@ -9,8 +9,16 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: none;
+
     border-radius: 15px;
+}
+
+.item {
+    display: none;
+}
+
+.item.active {
+    display: block;
 }
 
 #gallery {
@@ -18,9 +26,6 @@
     height: 100%;
 }
 
-#gallery .active {
-    display: block;
-}
 
 #carousel .fa-solid {
     position: absolute;
