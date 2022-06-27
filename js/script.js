@@ -19,13 +19,37 @@
 // array delle immagini
 const images = ['img/01.jpg', 'img/02.jpg', 'img/03.jpg', 'img/04.jpg', 'img/05.jpg',];
 const gallery = document.getElementById("gallery");
+const nextButton = document.getElementById("next");
+const prevButton = document.getElementById("prev");
 
 for (let i = 0; i < images.length; i++) {
     gallery.innerHTML += `<img src="${images[i]}" class="item">`
 }
 
-let activeCurrentIndex = 0
-const galleryImages = document.getElementsByClassName("item")
-console.log(galleryImages)
+let activeCurrentIndex = 0;
+const galleryImages = document.getElementsByClassName("item");
+console.log(galleryImages);
 galleryImages[activeCurrentIndex].classList.add("active");
 
+nextButton.addEventListener('click', function () {
+    galleryImages[activeCurrentIndex].classList.remove("active");
+    activeCurrentIndex++;
+
+    if (activeCurrentIndex >= images.length) {
+        activeCurrentIndex = 0;
+    }
+
+    galleryImages[activeCurrentIndex].classList.add("active");
+})
+
+prevButton.addEventListener('click', function () {
+    galleryImages[activeCurrentIndex].classList.remove("active");
+    activeCurrentIndex--;
+
+    if (activeCurrentIndex <= 0) {
+        activeCurrentIndex = images.length - 1;
+        console.log(activeCurrentIndex)
+    }
+
+    galleryImages[activeCurrentIndex].classList.add("active");
+});
