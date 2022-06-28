@@ -65,7 +65,7 @@ prevButton.addEventListener('click', function () {
 
 
     //! quando arrivo alla prima immagine ricomincio dall'ultima
-    if (activeCurrentIndex <= 0) {
+    if (activeCurrentIndex < 0) {
         activeCurrentIndex = images.length - 1;
         console.log(activeCurrentIndex)
     }
